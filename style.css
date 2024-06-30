@@ -1,0 +1,90 @@
+/* Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+body {
+  background-image: url("./images/bg-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.left,
+.welcome,
+.right {
+  animation-name: transform;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 700;
+  animation-duration: 0.9s;
+  transition: all 700ms;
+}
+
+@keyframes transform {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.forms {
+  border-radius: 0.3em;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.forms h3 {
+  color: white;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.btn-dark > i {
+  color: #999;
+}
+.rotate {
+  font-size: 1.12rem;
+}
+
+.btn-light:focus {
+  .rotate {
+    animation-name: rotate;
+    animation-duration: 0.8s;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  body {
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .rotate {
+    font-size: 0.9rem;
+  }
+}
